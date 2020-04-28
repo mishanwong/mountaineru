@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h2>{{ the_title }}</h2>
+
+<p>You submitted the following data:</p>
+
+<table>
+    <tr><td>{{ the_searchquery }}</td></tr>
+    <tr><td>{{ the_datefrom }}</td></tr>
+    <tr><td>{{ the_dateto }}</td></tr>
+    <tr><td>{{ the_difficulty }}</td></tr>
+</table>
+
+{% endblock %}
