@@ -4,13 +4,17 @@
 
 <h2>{{ the_title }}</h2>
 
-<p>You submitted the following data:</p>
+<p>Here are your search results:</p>
 
-<table>
-    <tr><td>Tour: {{ the_searchquery }}</td></tr>
-    <tr><td>From: {{ the_datefrom }}</td></tr>
-    <tr><td>To: {{ the_dateto }}</td></tr>
-    <tr><td>Difficulty: {{ the_difficulty }}</td></tr>
-</table>
+        {% for row in output_data %} 
+        <table>
+            <tr><td>{{row[0]}}</td></tr>
+            <tr><td>{{row[1]}}</td></tr>
+            <tr><td>{{row[2]}}</td></tr>
+            <tr><td>{{row[3]}}</td></tr>
+            <tr><td>{{row[4]}}</td></tr>
+            <tr><td>{{row[5]}}</td></tr>    
+        </table>
+        {% endfor %}       
 
 {% endblock %}
