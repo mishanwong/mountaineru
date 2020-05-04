@@ -1,4 +1,17 @@
 body {
-    background-color: #fff0f5;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffff99;
+    color: #000099;
+    font-family: 'Special Elite', cursive, sans-serif;
+}
+
+a:hover{
+    color: hotpink;
+}
+
+p {
+    line-height: 1.5em;
+}
+
+.center {
+    text-align: center;
 }
