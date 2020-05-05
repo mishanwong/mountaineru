@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for
 import mysql.connector
 
-app = Flask(__name__)
+application = app = Flask(__name__)
 
 app.secret_key = 'dhaulagiri'
 
@@ -47,4 +47,4 @@ def do_search() -> 'html':
     return render_template('result.html', output_data=searchresult)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    application.run(debug=True)
