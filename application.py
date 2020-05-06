@@ -8,7 +8,8 @@ app.secret_key = 'dhaulagiri'
 dbconfig = {    'host': 'aa1c3p2qmazyyc1.cpksfpeuyyky.us-west-2.rds.amazonaws.com',
                 'user': 'mimineruDB',
                 'password': 'digital-nomad',
-                'database': 'mountaineruDB',}
+                'database': 'MountaineruDB',
+                'port': 3306,}
 
 @app.route('/')
 def index():
