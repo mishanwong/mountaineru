@@ -5,8 +5,8 @@ application = app = Flask(__name__)
 
 app.secret_key = 'dhaulagiri'
 
-dbconfig = {    'host': '127.0.0.1',
-                'user': 'mimi-db',
+dbconfig = {    'host': 'aa1c3p2qmazyyc1.cpksfpeuyyky.us-west-2.rds.amazonaws.com',
+                'user': 'mimineruDB',
                 'password': 'digital-nomad',
                 'database': 'mountaineruDB',}
 
