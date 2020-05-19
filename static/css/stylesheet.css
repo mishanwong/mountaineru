@@ -1,11 +1,7 @@
 body {
-    background-color: #ffff99;
-    color: #000099;
-    font-family: 'Special Elite', cursive, sans-serif;
-}
-
-a:hover{
-    color: hotpink;
+    background-color: hsl(204, 70%, 80%);
+    color: #F96F2F;
+    font-family: 'Roboto', sans-serif;
 }
 
 p {
@@ -14,4 +10,12 @@ p {
 
 .center {
     text-align: center;
+}
+
+.button {
+    color: #003366;
+    background-color: rgb(96, 178, 184);
+    font-size: 14px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 15%
 }
