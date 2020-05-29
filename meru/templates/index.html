@@ -36,7 +36,7 @@
         <div class="container-fluid">
           <div class="d-flex align-items-center"><a class="navbar-brand py-1" href="#"><img src="{{ url_for('static', filename='img/logo.svg') }}" alt="Directory logo"></a>
             <form class="form-inline d-none d-sm-flex" action="#" id="search">
-              <div class="input-label-absolute input-label-absolute-left input-reset input-expand ml-lg-2 ml-xl-3"> 
+              <div class="input-label-absolute input-label-absolute-left input-reset input-expand ml-lg-2 ml-xl-3">
                 <label class="label-absolute" for="search_search"><i class="fa fa-search"></i><span class="sr-only">What are you looking for?</span></label>
                 <input class="form-control form-control-sm border-0 shadow-0 bg-gray-200" id="search_search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-reset btn-sm" type="reset"><i class="fa-times fas"></i></button>
@@ -54,11 +54,11 @@
               </div>
             </form>
             <ul class="navbar-nav ml-auto">
-              
-              
+
+
               <li class="nav-item"><a class="nav-link" href="#">Contact</a>
               </li>
-            
+
               <li class="nav-item"><a class="nav-link" href="#">Sign in</a></li>
               <li class="nav-item"><a class="nav-link" href="#">Sign up</a></li>
               <li class="nav-item mt-3 mt-lg-0 ml-lg-3 d-lg-none d-xl-inline-block"><a class="btn btn-primary" href="#">Add an adventure</a></li>
@@ -69,7 +69,7 @@
       <!-- /Navbar -->
     </header>
     <section class="d-flex align-items-center dark-overlay bg-cover" style="background-image: url(img/photo/photo-1525610553991-2bede1a236e2.jpg);">
-      <div class="container py-6 py-lg-7 text-white overlay-content text-center"> 
+      <div class="container py-6 py-lg-7 text-white overlay-content text-center">
         <div class="row">
           <div class="col-xl-10 mx-auto">
             <h1 class="display-3 font-weight-bold text-shadow">Mountaineru</h1>
@@ -98,10 +98,9 @@
               </div>
             </div>
           -->
-            <div class="col-md-6 col-lg-3 d-flex align-items-center form-group no-divider">
+            <!-- <div class="col-md-6 col-lg-3 d-flex align-items-center form-group no-divider">
               {{ form.difficulty.label(class="btn-form-control select-picker") }}
-              {{ form.difficulty() }}
-              <!--
+              {{ form.difficulty() }} -->
               <select class="selectpicker" name="difficulty" title="Difficulty" data-style="btn-form-control">
                 <option value="small">Easy</option>
                 <option value="medium">Moderate</option>
@@ -116,7 +115,7 @@
         </form>
       </div>
     </div>
-    
+
     <!-- Divider Section-->
     <section class="py-6 py-lg-7 position-relative dark-overlay"><img class="bg-image" src="{{ url_for('static', filename='img/photo/photo-1507915135761-41a0a222c709.jpg') }}" alt="">
       <div class="container">
@@ -127,11 +126,11 @@
         </div>
       </div>
     </section>
-    
+
     <!-- Footer-->
     <footer class="position-relative z-index-10 d-print-none">
       <!-- Main block - menus, subscribe form-->
-      <div class="py-6 bg-gray-200 text-muted"> 
+      <div class="py-6 bg-gray-200 text-muted">
         <div class="container">
           <div class="row">
             <div class="col-lg-4 mb-5 mb-lg-0">
@@ -204,12 +203,12 @@
     <!-- JavaScript files-->
     <script>
       // ------------------------------------------------------- //
-      //   Inject SVG Sprite - 
-      //   see more here 
+      //   Inject SVG Sprite -
+      //   see more here
       //   https://css-tricks.com/ajaxing-svg-sprite/
       // ------------------------------------------------------ //
       function injectSvgSprite(path) {
-      
+
           var ajax = new XMLHttpRequest();
           ajax.open("GET", path, true);
           ajax.send();
@@ -219,13 +218,13 @@
           div.innerHTML = ajax.responseText;
           document.body.insertBefore(div, document.body.childNodes[0]);
           }
-      }    
+      }
       // to avoid CORS issues when viewing using file:// protocol, using the demo URL for the SVG sprite
       // use your own URL in production, please :)
       // https://demo.bootstrapious.com/directory/1-0/icons/orion-svg-sprite.svg
-      //- injectSvgSprite('${path}icons/orion-svg-sprite.svg'); 
-      injectSvgSprite('https://demo.bootstrapious.com/directory/1-4/icons/orion-svg-sprite.svg'); 
-      
+      //- injectSvgSprite('${path}icons/orion-svg-sprite.svg');
+      injectSvgSprite('https://demo.bootstrapious.com/directory/1-4/icons/orion-svg-sprite.svg');
+
     </script>
     <!-- jQuery-->
     <script src="vendor/jquery/jquery.min.js"></script>
