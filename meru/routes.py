@@ -1,12 +1,20 @@
-from flask import render_template, request, redirect, url_for
+from flask import render_template, request, redirect, url_for, make_response
 from meru.forms import SearchForm
 from meru import app
+from meru.models import Trip
 
 @app.route('/', methods = ['POST', 'GET'])
 @app.route('/home', methods = ['POST', 'GET'])
 def home():
     form = SearchForm()
     return render_template('index.html', form=form)
+
+
+@app.route('/category', methods = ['POST', 'GET'])
+def category():
+    trips = Trip.query.filter_by(trek_code='EBC').all()
+    return render_template('category.html', trips=trips)
+
 
 '''
 @app.route('/compare', methods=['GET', 'POST'])

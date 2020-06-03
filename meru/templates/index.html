@@ -1,73 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Directory Theme by Bootstrapious</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="all,follow">
-    <!-- Price Slider Stylesheets -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/nouislider/nouislider.css') }}">
-    <!-- Google fonts - Playfair Display-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700">
-    <!-- Google fonts - Poppins-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,400i,700">
-    <!-- swiper-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/css/swiper.min.css">
-    <!-- Magnigic Popup-->
-    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/magnific-popup/magnific-popup.css') }}">
-    <!-- theme stylesheet-->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.default.css') }}" id="theme-stylesheet">
-    <!-- Custom stylesheet - for your changes-->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
-    <!-- Favicon-->
-    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.png') }}">
-    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
-    <!-- Font Awesome CSS-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-  </head>
-  <body style="padding-top: 72px;">
-    <header class="header">
-      <!-- Navbar-->
-      <nav class="navbar navbar-expand-lg fixed-top shadow navbar-light bg-white">
-        <div class="container-fluid">
-          <div class="d-flex align-items-center"><a class="navbar-brand py-1" href="#"><img src="{{ url_for('static', filename='img/logo.svg') }}" alt="Directory logo"></a>
-            <form class="form-inline d-none d-sm-flex" action="#" id="search">
-              <div class="input-label-absolute input-label-absolute-left input-reset input-expand ml-lg-2 ml-xl-3"> 
-                <label class="label-absolute" for="search_search"><i class="fa fa-search"></i><span class="sr-only">What are you looking for?</span></label>
-                <input class="form-control form-control-sm border-0 shadow-0 bg-gray-200" id="search_search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-reset btn-sm" type="reset"><i class="fa-times fas"></i></button>
-              </div>
-            </form>
-          </div>
-          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
-          <!-- Navbar Collapse -->
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <form class="form-inline mt-4 mb-2 d-sm-none" action="#" id="searchcollapsed">
-              <div class="input-label-absolute input-label-absolute-left input-reset w-100">
-                <label class="label-absolute" for="searchcollapsed_search"><i class="fa fa-search"></i><span class="sr-only">What are you looking for?</span></label>
-                <input class="form-control form-control-sm border-0 shadow-0 bg-gray-200" id="searchcollapsed_search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-reset btn-sm" type="reset"><i class="fa-times fas">           </i></button>
-              </div>
-            </form>
-            <ul class="navbar-nav ml-auto">
-              
-              
-              <li class="nav-item"><a class="nav-link" href="#">Contact</a>
-              </li>
-            
-              <li class="nav-item"><a class="nav-link" href="#">Sign in</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Sign up</a></li>
-              <li class="nav-item mt-3 mt-lg-0 ml-lg-3 d-lg-none d-xl-inline-block"><a class="btn btn-primary" href="#">Add an adventure</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <!-- /Navbar -->
-    </header>
+{% extends 'base.html' %}
+
+{% block body %}
+</header>
     <section class="d-flex align-items-center dark-overlay bg-cover" style="background-image: url(img/photo/photo-1525610553991-2bede1a236e2.jpg);">
       <div class="container py-6 py-lg-7 text-white overlay-content text-center"> 
         <div class="row">
@@ -78,17 +12,79 @@
         </div>
       </div>
     </section>
+
+    <!-- Our picks section-->
+    <section class="py-6">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-8">
+            <p class="subtitle text-primary">Most popular treks</p>
+            <h2>What's trending</h2>
+          </div>
+          <div class="col-md-4 d-md-flex align-items-center justify-content-end"><a class="text-muted text-sm" href="{{ url_for('static', filename='category.html') }}">
+               See all cities<i class="fas fa-angle-double-right ml-2"></i></a></div>
+        </div>
+        <div class="row">
+          <div class="d-flex align-items-lg-stretch mb-4 col-lg-8">
+            <div class="card shadow-lg border-0 w-100 border-0 hover-animate" style="background: center center url(img/photo/photo-1449034446853-66c86144b0ad.jpg) no-repeat; background-size: cover;">
+              <a class="tile-link" href="/category"> </a>
+              <div class="d-flex align-items-center h-100 text-white justify-content-center py-6 py-lg-7">
+                <h3 class="text-shadow text-uppercase mb-0">Everest Base Camp</h3>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex align-items-lg-stretch mb-4 col-lg-4">
+            <div class="card shadow-lg border-0 w-100 border-0 hover-animate" style="background: center center url(img/photo/photo-1429554429301-1c7d5ae2d42e.jpg) no-repeat; background-size: cover;">
+              <a class="tile-link" href="/category"> </a>
+              <div class="d-flex align-items-center h-100 text-white justify-content-center py-6 py-lg-7">
+                <h3 class="text-shadow text-uppercase mb-0">Annapurna Base Camp</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="d-flex align-items-lg-stretch mb-4 col-lg-4">
+            <div class="card shadow-lg border-0 w-100 border-0 hover-animate" style="background: center center url(img/photo/photo-1523430410476-0185cb1f6ff9.jpg) no-repeat; background-size: cover;">
+              <a class="tile-link" href="/category"> </a>
+              <div class="d-flex align-items-center h-100 text-white justify-content-center py-6 py-lg-7">
+                <h3 class="text-shadow text-uppercase mb-0">Everest Three Passes Trek</h3>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex align-items-lg-stretch mb-4 col-lg-4">
+            <div class="card shadow-lg border-0 w-100 border-0 hover-animate" style="background: center center url(img/photo/photo-1505245208761-ba872912fac0.jpg) no-repeat; background-size: cover;">
+              <a class="tile-link" href="/category"> </a>
+              <div class="d-flex align-items-center h-100 text-white justify-content-center py-6 py-lg-7">
+                <h3 class="text-shadow text-uppercase mb-0">Ghorepani Poon Hill Trek</h3>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex align-items-lg-stretch mb-4 col-lg-4">
+            <div class="card shadow-lg border-0 w-100 border-0 hover-animate" style="background: center center url(img/photo/photo-1519867850-74775a87e783.jpg) no-repeat; background-size: cover;">
+              <a class="tile-link" href="/category"></a>
+              <div class="d-flex align-items-center h-100 text-white justify-content-center py-6 py-lg-7">
+                <h3 class="text-shadow text-uppercase mb-0">Gokyo Lake Trek</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
     <div class="container">
       <div class="search-bar rounded p-3 p-lg-4 position-relative mt-n5 z-index-20">
         <form method="POST" action="#">
           {{ form.hidden_tag() }}
           <div class="row">
             <div class="col-lg-4 d-flex align-items-center form-group">
+              <!--
               {{ form.adventure.label(class="form-control border-0 shadow-0") }}
               {{ form.adventure(class="form-control border-0 shadow-0") }}
-              <!-- <input class="form-control border-0 shadow-0" type="search" name="adventure" placeholder="Search for your adventure"> -->
+              -->
+              <input class="form-control border-0 shadow-0" type="search" name="adventure" placeholder="Search for your adventure">
             </div>
-          <!--
+          
             <div class="col-md-6 col-lg-3 d-flex align-items-center form-group">
               <div class="input-label-absolute input-label-absolute-right w-100">
                 <label class="label-absolute" for="location"><i class="fa fa-crosshairs"></i>
@@ -97,17 +93,19 @@
                 <input class="form-control border-0 shadow-0" type="text" name="location" placeholder="Location" id="location">
               </div>
             </div>
-          -->
+        
             <div class="col-md-6 col-lg-3 d-flex align-items-center form-group no-divider">
+              <!--
               {{ form.difficulty.label(class="btn-form-control select-picker") }}
               {{ form.difficulty() }}
-              <!--
+              -->
+              
               <select class="selectpicker" name="difficulty" title="Difficulty" data-style="btn-form-control">
                 <option value="small">Easy</option>
                 <option value="medium">Moderate</option>
                 <option value="large">Strenuous</option>
               </select>
-              -->
+              
             </div>
             <div class="col-lg-2 form-group mb-0">
               <button class="btn btn-primary btn-block h-100" type="submit">Search </button>
@@ -200,6 +198,8 @@
           </div>
         </div>
       </div>
+
+    {% endblock %}
     </footer>
     <!-- JavaScript files-->
     <script>
@@ -228,21 +228,21 @@
       
     </script>
     <!-- jQuery-->
-    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
     <!-- Bootstrap JS bundle - Bootstrap + PopperJS-->
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <!-- Magnific Popup - Lightbox for the gallery-->
-    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="{{ url_for('static', filename='vendor/magnific-popup/jquery.magnific-popup.min.js') }}"></script>
     <!-- Smooth scroll-->
-    <script src="vendor/smooth-scroll/smooth-scroll.polyfills.min.js"></script>
+    <script src="{{ url_for('static', filename='vendor/smooth-scroll/smooth-scroll.polyfills.min.js') }}"></script>
     <!-- Bootstrap Select-->
-    <script src="vendor/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script src="{{ url_for('static', filename='vendor/bootstrap-select/js/bootstrap-select.min.js') }}"></script>
     <!-- Object Fit Images - Fallback for browsers that don't support object-fit-->
-    <script src="vendor/object-fit-images/ofi.min.js"></script>
+    <script src="{{ url_for('static', filename='vendor/object-fit-images/ofi.min.js') }}"></script>
     <!-- Swiper Carousel                       -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.min.js"></script>
     <script>var basePath = ''</script>
     <!-- Main Theme JS file    -->
-    <script src="js/theme.js"></script>
+    <script src="{{ url_for('static', filename='js/theme.js') }}"></script>
   </body>
 </html>
