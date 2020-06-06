@@ -47,5 +47,15 @@ class Trip(db.Model):
                               nullable=False) 
 
 #not sure what this is
-def __repr__(self):
-    return f"Trip('{self.trek_name}', '{self.trip_id}')"
+    def __repr__(self):
+        return f"Trip('{self.trek_name}', '{self.trip_id}')"
+
+#Table for Guide Companies
+class Guide_Company(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    guide_company_id = db.Column(db.Integer, index=False, unique=True, nullable=False)
+    guide_company_name = db.Column(db.String(128), index=False, unique=True, nullable=False)
+    logo_url = db.Column(db.String(256), unique=True, nullable=True)
+
+    def __repr__(self):
+        return f"Guide_Company('{self.guide_company_id}', '{self.guide_company_name}')"

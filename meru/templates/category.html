@@ -7,7 +7,7 @@
     <div class="container-fluid pt-5 pb-3 border-bottom px-lg-5">
       <div class="row">
         <div class="col-xl-8">
-          <h1>Everest Base Camp</h1>
+          <h1>{{ title }}</h1>
           <p class="lead text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
         </div>
       </div>
@@ -352,9 +352,9 @@
             <!-- place item-->
             <div class="col-sm-6 col-xl-4 mb-5 hover-animate" data-marker-id="59c0c8e33b1527bfe2abaf92">
               <div class="card h-100 border-0 shadow">
-                <div class="card-img-top overflow-hidden gradient-overlay"> <img class="img-fluid" src="{{ url_for('static', filename='img/photo/photo-1484154218962-a197022b5858.jpg') }}" alt="Modern, Well-Appointed Room"/><a class="tile-link" href="#"></a>
+                <div class="card-img-top overflow-hidden gradient-overlay"> <img class="img-fluid" src="{{ url_for('static', filename=image) }}" alt="Modern, Well-Appointed Room"/><a class="tile-link" href="#"></a>
                   <div class="card-img-overlay-bottom z-index-20">
-                    <div class="media text-white text-sm align-items-center"><img class="avatar avatar-border-white mr-2" src="{{ url_for('static', filename='img/avatar/avatar-0.jpg') }}" alt="Pamela"/>
+                    <div class="media text-white text-sm align-items-center"><img class="avatar avatar-border-white mr-2" src="{{ url_for('static', filename=trip_logo[trip.trip_id]) }}" alt="Pamela"/>
                       <div class="media-body">{{ trip.guide_company }}</div>
                     </div>
                   </div>
